@@ -8,6 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.cat.crud_cat import CatCrud
 from app.cat.schemas import CatCreate
+from app.cat.utils import validate_breed
 from app.core import db_helper
 
 from app.user.dependencies import get_current_user
@@ -34,8 +35,13 @@ async def create_cspy_cat(
         current_user: Annotated[User, Depends(get_current_user)]
 ):
     validate_data = schema.model_dump()
-    spy = await CatCrud.add(session=session, **validate_data)
-    return spy
+    try:
+        validated_breed = await validate_breed(breed=validate_data.get("breed"))
+        if validated_breed:
+            spy = await CatCrud.add(session=session, **validate_data)
+            return spy
+    except Exception as e:
+        raise e
 
 
 

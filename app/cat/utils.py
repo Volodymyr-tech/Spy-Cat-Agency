@@ -7,3 +7,4 @@ async def validate_breed(breed: str):
         breeds = [b["name"] for b in response.json()]
         if breed not in breeds:
             raise HTTPException(status_code=400, detail="Invalid breed")
+        return True
