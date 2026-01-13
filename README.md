@@ -39,4 +39,4 @@ Swagger UI: http://localhost:8010/docs
 
 ReDoc: http://localhost:8010/redoc
 
-POSTMAN https://web.postman.co/workspace/My-Workspace~c205ccd8-820b-4dff-8f06-c11994ef1a1c/collection/39888354-d1eef2b0-ed3c-42c9-96c2-bda104d9ca76?action=share&source=copy-link&creator=39888354
+POSTMAN [https://web.postman.co/workspace/My-Workspace~c205ccd8-820b-4dff-8f06-c11994ef1a1c/collection/39888354-d1eef2b0-ed3c-42c9-96c2-bda104d9ca76?action=share&source=copy-link&creator=39888354](https://web.postman.co/documentation/39888354-d1eef2b0-ed3c-42c9-96c2-bda104d9ca76/publish?workspaceId=c205ccd8-820b-4dff-8f06-c11994ef1a1c&authFlowId=5ad42165-779e-412f-b431-18a6268b88a1)
