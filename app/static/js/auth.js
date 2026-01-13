@@ -28,7 +28,7 @@ const sendRequest = async (url, data) => {
         } else {
 
             console.error("Validation Error Details:", result.detail);
-            alert(result.message || 'Ошибка данных (проверьте длину пароля/имени)');
+            alert(result.message || 'Error in validation)');
             return null;
         }
     } catch (error) {
