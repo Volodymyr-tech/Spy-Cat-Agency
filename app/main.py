@@ -10,6 +10,8 @@ from fastapi.staticfiles import StaticFiles
 from app.core.config import settings
 from app.core.exceptions import TokenExpiredException, TokenNoFoundException
 from app.user.router import router as users_router
+from app.target.router import router as target_router
+from app.cat.router import router as cat_router
 static_dir = os.path.join(os.path.dirname(__file__), "static")
 
 
@@ -25,7 +27,8 @@ app.add_middleware(
 )
 
 app.include_router(users_router)
-
+app.include_router(target_router)
+app.include_router(cat_router)
 
 @app.get("/")
 async def redirect_to_auth():
