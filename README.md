@@ -3,20 +3,20 @@
 The project features a built-in web interface served directly by the backend.
 
 ### Tech Stack
+- **Framework**: FastAPI
 - **Templating**: HTML + Jinja2 (Server-Side Rendering).
 - **Scripts**: Vanilla JavaScript for dynamic interactions.
 - **Authentication**: Built-in secure authentication system to manage access to the agency's data.
+
+- **Environment**: Docker & Docker Compose
+- **Package Manager**: Poetry
+
 
 ### Features
 - **Web UI**: Manage cats and missions directly from your browser.
 - **Form Validation**: Real-time feedback using JavaScript.
 - **Protected Routes**: Secure access to sensitive spy data.
 
-### Tech Stack
-- **Framework**: FastAPI
-- **Database**: PostgreSQL (SQLAlchemy ORM + Alembic migrations)
-- **Environment**: Docker & Docker Compose
-- **Package Manager**: Poetry
 
 ---
 
@@ -39,4 +39,4 @@ Swagger UI: http://localhost:8010/docs
 
 ReDoc: http://localhost:8010/redoc
 
-POSTMAN https://documenter.getpostman.com/view/39888354/2sBXVhBpxJ
+POSTMAN https://web.postman.co/workspace/My-Workspace~c205ccd8-820b-4dff-8f06-c11994ef1a1c/collection/39888354-d1eef2b0-ed3c-42c9-96c2-bda104d9ca76?action=share&source=copy-link&creator=39888354

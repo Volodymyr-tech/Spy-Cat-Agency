@@ -23,7 +23,7 @@ const sendRequest = async (url, data) => {
         const result = await response.json();
 
         if (response.ok) {
-            alert(result.message || 'Успешно');
+            alert(result.message || 'Error');
             return result;
         } else {
 
@@ -33,14 +33,14 @@ const sendRequest = async (url, data) => {
         }
     } catch (error) {
         console.error("Network/Server Error:", error);
-        alert('Ошибка сервера');
+        alert('Internal error');
     }
 };
 
 const handleFormSubmit = async (formType, url, data) => {
 
     if (!validateForm(Object.values(data))) {
-        alert('Заполните все поля');
+        alert('Fill all fields');
         return;
     }
 

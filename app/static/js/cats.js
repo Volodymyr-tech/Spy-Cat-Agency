@@ -31,7 +31,7 @@ async function showDetails(id) {
 async function addCat() {
     const data = {
         name: document.getElementById('cName').value,
-        years_experience: 1,
+        years_experience: document.getElementById('cAge').value,
         breed: document.getElementById('cBreed').value,
         salary: parseFloat(document.getElementById('cSalary').value)
     };
