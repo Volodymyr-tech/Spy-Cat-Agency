@@ -1,0 +1,21 @@
+[project]
+name = "spy-cat-agency"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Valdemar",email = "vovateslenko.1996.28@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[all] (>=0.128.0,<0.129.0)",
+    "sqlalchemy[asyncio] (>=2.0.45,<3.0.0)",
+    "asyncpg (>=0.31.0,<0.32.0)",
+    "alembic (>=1.18.0,<2.0.0)",
+    "pydantic-settings (>=2.12.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
