@@ -1,0 +1,134 @@
+:root {
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --panel: #141414;
+    --text: #eaeaea;
+    --muted: #9a9a9a;
+    --accent: #D4AF37;
+    --accent-dark: #b8962d;
+    --radius: 16px;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(1200px 600px at 20% -10%, #2a2a2a, transparent),
+        radial-gradient(800px 400px at 80% 110%, #2a2a2a, transparent),
+        var(--bg);
+
+    color: var(--text);
+}
+
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: linear-gradient(180deg, #1e1e1e, #121212);
+    padding: 28px 26px 34px;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+
+.tabs {
+    display: flex;
+    background: #101010;
+    padding: 4px;
+    border-radius: 12px;
+    margin-bottom: 26px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .2s ease;
+}
+
+.tab.active {
+    background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+    color: #1c1c1c;
+    font-weight: 700;
+}
+
+
+.form {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form.active {
+    display: flex;
+    animation: fade .25s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.form input {
+    width: 100%;
+    padding: 12px 14px;
+    background: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--text);
+    outline: none;
+    transition: .15s ease;
+}
+
+.form input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(212,175,55,0.22);
+}
+
+
+button {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 6px;
+
+    background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+    border: none;
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    filter: brightness(1.06);
+}
+
+
+.error {
+    margin-top: 4px;
+    text-align: center;
+    font-size: 12px;
+    color: #ff5c5c;
+    min-height: 14px;
+}
