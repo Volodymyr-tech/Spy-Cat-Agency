@@ -32,7 +32,7 @@ class DatabaseHelper:
             autoflush=False,
             autocommit=False,
             expire_on_commit=False,
-        )  # Create a session factory for our engine
+        )
 
     def get_scoped_session(self):
         session = async_scoped_session(

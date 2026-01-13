@@ -34,7 +34,7 @@ class DataBaseConfig(BaseModel):
 
 
 class ApiV1Prefix(BaseModel):
-    prefix: str = "/api"
+    # prefix: str = "/api"
     cat: str = "/cat"
     mission: str = "/mission"
 

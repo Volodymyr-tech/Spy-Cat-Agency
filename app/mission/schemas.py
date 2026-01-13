@@ -1,13 +1,18 @@
+from pydantic import BaseModel, Field
 from typing import List, Optional
 
-from pydantic import BaseModel, Field
-
-
-class TargetCreate(BaseModel):
-    name: str
-    country: str
-    notes: Optional[str] = ""
+from app.target.schemas import TargetBase
 
 
 class MissionCreate(BaseModel):
-    targets: List[TargetCreate] = Field(..., min_items=1, max_items=3)
+
+    targets: List[TargetBase] = Field(..., min_length=1, max_length=3)
+
+class MissionRead(BaseModel):
+    id: int
+    cat_id: Optional[int]
+    is_completed: bool
+    targets: List[TargetBase]
+
+    class Config:
+        from_attributes = True

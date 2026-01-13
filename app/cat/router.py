@@ -3,17 +3,16 @@ from typing import Annotated
 from fastapi.responses import HTMLResponse
 from fastapi.requests import Request
 from fastapi import Depends, APIRouter
-from pydantic.experimental.pipeline import validate_as_deferred
+
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.cat.crud_cat import CatCrud
 from app.cat.schemas import CatCreate
 from app.core import db_helper
-from app.mission.model import Mission
-from app.target.model import Target
+
 from app.user.dependencies import get_current_user
 from app.user.model import User
-from app.user.router import router
+
 from app.core.jinja_templates import templates
 
 router = APIRouter(prefix='/cats', tags=['cats'])
@@ -63,7 +62,6 @@ async def update_cat_salary(
     if not cat:
         raise HTTPException(status_code=404, detail="Cat agent not found")
 
-    # В твоем CRUD методе add/update должна быть поддержка изменения полей
     cat.salary = salary
     await session.commit()
     return {"status": "success", "new_salary": salary}
