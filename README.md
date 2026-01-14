@@ -23,7 +23,7 @@ The project features a built-in web interface served directly by the backend.
 ## Getting Started
 
 ### 1. Environment Setup
-Clone the repository and create a `.env` file from the example: ``` .env.example ```
+Clone the repository and create a `.env` file in /app directory from the example: ``` .env.example ```
 
 
 ### Run with Docker
